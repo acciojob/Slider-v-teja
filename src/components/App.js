@@ -2,6 +2,7 @@ import { useState,useEffect } from "react";
 import React from "react";
 import data from "./data";
 import '../styles/App.css';
+import Slider from "./Slider";
 
 
 const App = ()=> {
@@ -37,14 +38,11 @@ const App = ()=> {
         <div>
             <h1 id="review-heading">Reviews</h1>
             <div id="review-container">
-                <div>
-                    <img className="person-img" id={`person-${index}-image`} src={data[index].image}></img>
-                </div>
-                <div>
-                    <span className="author" id={`person-${index}`}>Name: {data[index].name}</span>
-                    <p className="title">Title: {data[index].title}</p>           
-                    <p className="quote">Quote: {data[index].quote}</p>  
-                </div>
+                {/*  */}
+                <Slider index={index}>
+
+                </Slider>
+
                 <button className="prev" onClick={handlePrevClick}>Previous</button>
                 <button className="next" onClick={hangleNextClick}>Next</button>
             </div>
